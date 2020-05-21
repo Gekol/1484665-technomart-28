@@ -1,0 +1,74 @@
+.contacts {
+    background-color: #293449;
+}
+
+.network {
+    background-color: #212A3A;
+}
+
+.leftArrow, .rightArrow {
+    position: absolute;
+    top:110px;
+}
+
+.slider {
+    position: relative;
+    width: 620px;
+}
+
+.rightArrow {
+    right: 0;
+}
+
+.materials {
+    background-color: #FFBF47;
+}
+
+.tools {
+    background-color: #3BBCE3;
+}
+
+.technologies {
+    background-color: #DC91D8;
+}
+
+.discounts {
+    background-color: #8ED78F;
+}
+
+.delivery {
+    background-color: #FFC047;
+}
+
+.formerPrice {
+    text-decoration: line-through;
+}
+
+header {
+    background-color: #293449;
+}
+
+.networks {
+    display: flex;
+    flex-direction: row;
+    width: 5%;
+    justify-content: space-around;
+}
+
+.vk {
+    width: 26px;
+    height: 15px;
+    background-image: url("../img/icon-vk.svg");
+}
+
+.fb {
+    width: 12px;
+    height: 22px;
+    background-image: url("../img/icon-fb.svg");
+}
+
+.insta {
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-insta.svg");
+}
