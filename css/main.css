@@ -1,0 +1,126 @@
+.details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.details {
+    width: 920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 120px 120px 120px;
+    gap: 20px;
+}
+
+.perforators {
+    height: 100%;
+    grid-column: 1/3;
+}
+
+.discounts {
+    grid-column: 3;
+}
+
+.delivery {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.slider {
+    grid-row: 2/4;
+    grid-column: 1/3;
+    position: relative;
+    color: var(--white);
+    font-family: Cuprum;
+    font-weight: bold;
+}
+
+.slider img:nth-child(2) {
+    width: 100%;
+}
+
+.slider p {
+    position: absolute;
+    margin-left: 24px;
+}
+
+.slider p:nth-child(1) {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.details > div {
+    display: flex;
+}
+
+.details > div > div {
+    flex-grow: 1;
+    margin-left: 23px;
+}
+
+.details > div img {
+    align-self: flex-end;
+    margin: auto 0;
+    margin-right: 43px;
+}
+
+.slider .leftArrow, .slider .rightArrow {
+    top: 125px;
+    position: absolute;
+    margin: 0 24px;
+}
+
+.details .slider div {
+    margin: 0;
+}
+
+.perforator-examples, .services article, .description-block article p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.description-block button {
+    font-family: 'Cuprum', sans-serif;
+}
+
+.manufacturers {
+    font-family: Cuprum, sans-serif;
+}
+
+.section-title {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.all-items {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.formerPrice {
+    background: var(--red);
+}
+
+.about .buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    padding: 59px 0;
+}
+
+.link {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 24px;
+    width: 140px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.detail a {
+    font-size: 14px;
+    line-height: 18px;    
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+}
