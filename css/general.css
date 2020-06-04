@@ -1,10 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {    
+    --red: #EE3643;
+    --white: #FFFFFF;
+    --basic: #293449;
+    --gold: #FFBF47;
+    --green: #8ED78F;
+    --technologies: #DC91D8;
+    --tools: #3BBCE3;
+    --light-basic: #32425C;
+    --sand: #F9F5F0;
+    --phone-color: #F3F7F9;
+    --light-blue: #F3F7F8;
+    --order-color: #63A63E;
+    --black: #000000;
+    --service-color: #F1F5F7;
+    --network-background: #212A3A;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: var(--light-blue);
+    width: 100%;
+    padding-bottom: 60px;
+    color: var(--white);
+}
+
+.menu-block {
+    background-color: var(--basic);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 130px;
+}
+
+header > div {
+    display: flex;
+    font-family: 'Cuprum', "Arial", sans-serif;
+}
+
+.city {
+    color: var(--light-basic);
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    font-family: Cuprum;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.menu button {
+    background-color: var(--order-color);
+    padding: 9px 16px 9px 19px;
+    font-family: Cuprum;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white);
+    border: none;
+}
+
+.about {
+    margin: 40px 160px;
+    align-items: center;
+}
+
+.about > div p {
+    margin: 0;
+}
+
+.about .phone {
+    font-weight: bold;
+    color: var(--red);
+    font-size: 21px;
+    line-height: 30px;
+    background-color: var(--phone-color);
+    width: 270px;
+    text-align: center;
+    padding: 7px 0 7px;
+    border: 3px solid var(--white);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.about button {
+    font-size: 21px;
+    line-height: 21px;
+    padding: 6px 12px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.about div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.about button img {
+    padding: 0 6px;
+}
+
+.description {
+    font-family: 'Cuprum', "Arial", sans-serif;
+    font-style: italic;
+    color: var(--red);
+    width: 193px;
+    margin: 0;
+}
+
+.contacts {
+    background-color: var(--basic);
+    display: flex;
+    padding: 35px;
+}
+
+.about .profile-block {
+    margin: 0;
+}
+
+.profile p {
+    color: var(--black);
+}
+
+.profile + ul {
+    display: flex;
+    color: var(--light-basic);
+    justify-content: space-between;
+    padding: 0;
+}
+
+.profile + ul li:first-child {
+    list-style-type: none;
+}
+
+.network {
+    background: linear-gradient(0deg, var(--network-background), var(--network-background));
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+nav a {
+    font-family: 'Cuprum', "Arial", sans-serif;
+}
+
+main {
+    font-family: 'Cuprum', "Arial", sans-serif;
+    padding: 59px 0;
+}
+
+main > section {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.rightArrow {
+    right: 0;
+}
+
+.materials {
+    background-color: var(--gold);
+}
+
+.tools {
+    background-color: var(--tools);
+}
+
+.technologies {
+    background-color: var(--technologies);
+}
+
+.discounts {
+    background-color: var(--green);
+}
+
+.delivery {
+    background-color: var(--gold);
+}
+
+.formerPrice {
+    text-decoration: line-through;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.currentPrice {
+    background: var(--red);
+    color: var(--white);
+    font-weight: bold;
+    padding: 10px 32px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+    left: 50%;
+    margin-left: -70px;
+}
+
+.currentPrice::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20.5px 0 21px 21px;
+    border-color: transparent transparent transparent var(--red);
+    position: absolute;
+    right: -21px;
+    bottom: -0.3px;
+}
+
+.networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.vk {
+    width: 26px;
+    height: 15px;
+    background-image: url("../img/icon-vk.svg");
+    margin-left: -13px;
+    margin-top: -7px;
+}
+
+.fb {
+    width: 12px;
+    height: 22px;
+    background-image: url("../img/icon-fb.svg");
+    margin-top: -11px;
+    margin-left: -6px;
+}
+
+.insta {
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-insta.svg");
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+footer {
+    font-family: 'Cuprum', "Arial", sans-serif;
+}
+
+nav ul {
+    margin: 0 130px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--light-basic);
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+
+nav li:hover {
+    background-color: var(--basic);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 16px 0 20px;
+}
+
+.downside-navigation {
+    background-color: var(--light-basic);
+}
+
+.downside-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+.about .contacts {
+    border: 3px solid var(--white);
+    background: inherit;
+}
+
+.rights-reserved {
+    margin-left: auto;
+}
+
+.rights-reserved p, .created-by p, .feedback p {
+    margin: 0;
+}
+
+.created-by {
+    margin-right: auto;
+}
+
 .details {
     display: flex;
     justify-content: space-around;
 }
 
+.title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title {
+    color: var(--white);
+    text-transform: uppercase;
+    background-color: var(--red);
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 12px 0 17px;
+    margin: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    width: 220px;
+    box-sizing: border-box;
+    margin-right: 17px;
+}
+
 .details {
-    width: 920px;
+    width: 940px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 32% 32% 32%;
@@ -52,26 +390,22 @@
 
 .details > div {
     display: flex;
-    /* justify-content: space-around; */
-    /* align-items: center; */
 }
 
 .details > div > div {
-    flex-grow: 1;
     margin-left: 23px;
 }
 
 .details > div img {
     align-self: flex-end;
-    margin: auto 0;
-    margin-right: 43px;
+    margin: auto;
 }
 
 .details h3 {
     font-size: 24px;
     line-height: 30px;
     color: var(--white);
-    margin: auto 0;
+    margin: 20px 0 auto;
 }
 
 .slider .leftArrow, .slider .rightArrow {
@@ -88,6 +422,37 @@
     font-family: 'PT Sans', "Arial", sans-serif;
 }
 
+.services {
+    width: 100%;
+    background-color: var(--service-color);
+}
+
+.service-content {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.services ul {
+    padding: 0;
+}
+
+.services li {
+    list-style-type: none;
+}
+
+.service-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-detail {
+    display: flex;
+}
+
+.service-detail p {
+    width: 330px;
+}
+
 .description-block button {
     font-family: 'Cuprum', "Arial", sans-serif;
 }
@@ -96,32 +461,36 @@
     font-family: 'Cuprum', "Arial", sans-serif;
 }
 
-.formerPrice {
-    background: var(--red);
-    color: var(--white);
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: bold;
-    padding: 10px 32px;
-    box-sizing: border-box;
-    
-}
-
-.about .buttons {
+.manufacturers-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    padding: 0;
+    height: 310px;
+    align-content: space-between;
 }
 
-main {
-    padding: 59px 0;
+.manufacturers-list li {
+    list-style-type: none;
+}
+
+.about button{
+    height: 45px;
+    padding: 0 24px;
+    background-color: var(--white);
+    border: none;
 }
 
 .link {
     background-color: rgba(255, 255, 255, 0.3);
-    padding: 10px 24px;
-    width: 140px;
     box-sizing: border-box;
     text-align: center;
+    margin: auto 0 20px;
+}
+
+.link a {
+    display: block;
+    padding: 10px 24px;
 }
 
 .detail a {
@@ -138,12 +507,15 @@ main {
 }
 
 .perforator-examples {
-    width: 920px;
-    margin: 0 auto;
-    
+    width: 940px;
+    margin: 0 auto 70px;
 }
 
-.perforator-examples > div {
+.detail > div > * {
+    width: 170px;
+}
+
+.section-title-block {
     background-color: var(--sand);
     display: flex;
     align-items: center;
@@ -181,222 +553,12 @@ main {
     height: 185px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .perforator-examples li {
-
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-:root {    
-    --red: #EE3643;
-    --white: #FFFFFF;
-    --basic: #293449;
-    --gold: #FFBF47;
-    --green: #8ED78F;
-    --technologies: #DC91D8;
-    --tools: #3BBCE3;
-    --light-basic: #32425C;
-    --sand: #F9F5F0;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-}
-
-header {
-    background: rgba(0, 0, 0, 0.0001);
-    width: 100%;
-    padding-bottom: 60px;
-}
-
-.menu-block {
-    background-color: var(--basic);
-}
-
-header > div {
-    display: flex;
-    font-family: 'Cuprum', "Arial", sans-serif;
-    align-items: center;
-}
-
-header > div > *{
-    margin: 0 auto;
-}
-
-.phone {
-    font-weight: bold;
-    color: var(--red);
-    font-size: 21px;
-    line-height: 30px;
-}
-
-.visually-hidden {
-    display: none;
-}
-
-.menu {
-    font-family: Cuprum;
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--white);
-}
-
-.menu button {
-    background-color: #63A63E;
-    padding: 9px 16px 9px 19px;
-    font-family: Cuprum;
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--white);
-    border: none;
-}
-
-.about {
-    margin: 0 160px;
-}
-
-.about button {
-    font-size: 21px;
-    line-height: 21px;
-    padding: 6px 12px;
-}
-
-.about div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.about button img {
-    padding: 0 6px;
-}
-
-.description {
-    font-family: 'Cuprum', "Arial", sans-serif;
-    font-style: italic;
-    color: var(--red);
-    width: 193px;
-}
-
-.contacts {
-    background-color: var(--basic);
-}
-
-.network {
-    background-color: var(--basic);
-}
-
-nav a {
-    font-family: 'Cuprum', "Arial", sans-serif;
-}
-
-main {
-    font-family: 'Cuprum', "Arial", sans-serif;
-}
-
-.rightArrow {
-    right: 0;
-}
-
-.materials {
-    background-color: var(--gold);
-}
-
-.tools {
-    background-color: var(--tools);
-}
-
-.technologies {
-    background-color: var(--technologies);
-}
-
-.discounts {
-    background-color: var(--green);
-}
-
-.delivery {
-    background-color: var(--gold);
-}
-
-.formerPrice {
-    text-decoration: line-through;
-}
-
-.networks {
-    display: flex;
-    flex-direction: row;
-    width: 5%;
-    justify-content: space-around;
-}
-
-.vk {
-    width: 26px;
-    height: 15px;
-    background-image: url("../img/icon-vk.svg");
-}
-
-.fb {
-    width: 12px;
-    height: 22px;
-    background-image: url("../img/icon-fb.svg");
-}
-
-.insta {
-    width: 21px;
-    height: 21px;
-    background-image: url("../img/icon-insta.svg");
-}
-
-footer {
-    font-family: 'Cuprum', "Arial", sans-serif;
-}
-
-nav ul {
-    margin: 0 130px;
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--light-basic);
-    padding: 0;
-}
-
-nav li {
-    list-style-type: none;
-    width: 100%;
-    text-align: center;
-}
-
-nav li:hover {
-    background-color: var(--basic);
-}
-
-nav a {
-    color: var(--white);
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 16px 0 20px;
-}
-
-.downside-navigation {
-    background-color: var(--light-basic);
-}
-
-.downside-navigation ul {
-    margin: 0;
-    padding: 0;
-}
-
-.about .contacts {
-    border: 3px solid var(--white);
-    background: inherit;
-}
-
-.rights-reserved, .created-by {
-    margin: 0;
+    position: relative;
+    height: 318px;
 }
 
 .goods {
