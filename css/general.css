@@ -23,31 +23,36 @@
     --former-price: #A9A9A9;
     --filter-border-color: #E5E5E5;
     --buy-button-color: #63A63E;
+    --fieldset-border: #F4F4F4;
+    --scale-color: #D7DCDE;
+    --bar-color: #00CA74;
+    --toggle-color: #ababab;
+    --perforator-border-color: #EAEAEA;
+    --buy-button-shadow-color: #367315;
 }
 
 body {
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: min-content 100% min-content;;
 }
 
 .header-block {
     background: var(--light-blue);
     padding-bottom: 60px;
     color: var(--white);
-    display: grid;
-    grid-template-columns: 1fr 130px 940px 130px 1fr;
+    grid-column: 2/3;
 }
 
 .menu-content {
     background-color: var(--basic);
-    grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: 1fr 130px 940px 130px 1fr;
-
+    display: flex;
 }
 
 .container {
-    grid-column: 3/4;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .navigation-content {
@@ -61,6 +66,7 @@ body {
 .menu-block {
     display: flex;
     justify-content: space-between;
+    grid-column: 1/-1;
 }
 
 .header-block > div {
@@ -167,12 +173,11 @@ body {
     font-style: italic;
     color: var(--red);
     margin: 0;
+    margin-left: 30px;
 }
 
 .downside-contacts-content {
     background-color: var(--basic);
-    display: grid;
-    grid-template-columns: 1fr 130px 940px 130px 1fr;
 }
 
 .downside-contacts {
@@ -256,12 +261,10 @@ body {
 .main-content {
     font-family: 'Cuprum', "Arial", sans-serif;
     padding-top: 59px;
-    display: grid;
-    grid-template-columns: 1fr 130px 940px 130px 1fr;
+    grid-column: 2/3;
 }
 
 .main-content > section {
-    grid-column: 3/4;
     margin-bottom: 60px;
 }
 
@@ -366,6 +369,7 @@ body {
 
 .downside {
     font-family: 'Cuprum', "Arial", sans-serif;
+    grid-column: 2/3;
 }
 
 .navigation ul {
@@ -395,8 +399,6 @@ body {
 
 .downside-navigation-content {
     background-color: var(--light-basic);
-    display: grid;
-    grid-template-columns: 1fr 130px 940px 130px 1fr;
 }
 
 .downside-navigation {
@@ -566,7 +568,7 @@ body {
     background-color: var(--service-color);
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 1fr 130px 940px 130px 1fr;
+    grid-template-columns: 1fr 1200px 1fr;
 }
 
 .services ul {
@@ -591,7 +593,7 @@ body {
 
 .service-content {
     padding-top: 20px;
-    grid-column: 3/4;
+    grid-column: 2/3;
 }
 
 .service-details {
@@ -826,7 +828,7 @@ body {
 
 .perforator-examples li, .perforators-list li {
     position: relative;
-    border: 1px solid #EAEAEA;
+    border: 1px solid var(--perforator-border-color);
     margin-right: 20px;
     flex-grow: 1;
     display: flex;
@@ -863,8 +865,6 @@ body {
     background-color: var(--service-color);
     width: 100%;
     margin: 0px;
-    display: grid;
-    grid-template-columns: 1fr 130px 940px 130px 1fr;;
     font-size: 13px;
     line-height: 24px;
     grid-column: 1/-1;
@@ -947,7 +947,7 @@ body {
 
 .filter-title {
     background-color: var(--light-yellow);
-    padding: 20px 18px;
+    padding: 13px 18px;
     width: 220px;
     box-sizing: border-box;
     font-size: 13px;
@@ -962,8 +962,9 @@ body {
     line-height: 30px;
     text-transform: uppercase;
     margin: 0;
-    margin-top: 18px;
 }
+
+
 
 .filter-block {
     display: flex;
@@ -987,8 +988,103 @@ body {
     margin-bottom: 16px;
 }
 
-.manufacturer-filter, .price-filter {
-    border-bottom: 1px solid var(--black);
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.price-controls input {
+    width: 95px;
+    margin: 0;
+    text-align: center;
+    background-color: var(--light-yellow);
+    padding: 10px 0;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.dash {
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+.filter-block .manufacturer-filter, .filter-block .price-filter {
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--fieldset-border);
+}
+
+.manufacturer-filter {
+    margin: 0;
+}
+
+.manufacturer-filter li, .accumulator-filter li {
+    height: 23px;
+    box-sizing: border-box;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.manufacturer-filter label, .accumulator-filter label {
+    position: relative;
+    left: 40px;
+}
+
+.manufacturer-filter label::before, .accumulator-filter label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-image: url("/img/checkbox-off.png");
+    left: -37px;
+    top: -1px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+.accumulator-filter label::before {
+    width: 27px;
+    height: 27px;
+    background-image: url("/img/radio-off.png");
+}
+
+.manufacturer-filter input:checked + label::before, .accumulator-filter input:checked + label::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    left: -37px;
+    background-image: url("/img/checkbox-on.png");
+    background-repeat: no-repeat;
+}
+
+.accumulator-filter input:checked + label::before {
+    width: 27px;
+    height: 27px;
+    background-image: url("/img/radio-on.png");
+}
+
+.filters > div {
+    margin-top: 18px;
+}
+
+.filters fieldset {
+    border: none;
+    padding: 0;
+}
+
+.filters legend {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 .filters input[type="submit"] {
@@ -1001,6 +1097,41 @@ body {
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+}
+
+.range-controls {
+    height: 80px;
+    background-color: var(--light-yellow);
+    box-sizing: border-box;
+    padding: 39px 20px 0;
+    position: relative;
+}
+
+.scale {
+    height: 2px;
+    background-color: var(--scale-color);
+}
+
+.bar {
+    width: 80%;
+    height: 2px;
+    background-color: var(--bar-color);
+}
+
+.toggle {
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--white);
+    background-color: var(--toggle-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 31px;
+    left: 20px;
+}
+
+.max-value {
+    left: 140px;
 }
 
 .perforators-block {
@@ -1064,7 +1195,7 @@ body {
     background-color: var(--buy-button-color);
     color: var(--white);
     margin-bottom: 20px;
-    box-shadow: #367315;
+    box-shadow: inset 0px -3px 0px var(--buy-button-shadow-color);
 }
 
 .buy-button img {

@@ -69,7 +69,7 @@
   </header>
 
   <main class="catalog-main main-content">
-    <section class="goods">
+    <section class="goods container">
       <ul class="way">
         <li><a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Main page" /></a></li>
         <li>Каталог</li>
@@ -82,22 +82,43 @@
           <p class="filter-title">Фильтр:</p>
           <form action="catalogue.html" class="filters" oninput="result.value=price.value">
             <div class="filter-subtitle price-filter">
-              <p>Цена:</p>
+              <fieldset>
+                <legend>Цена:</legend>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle min-value"></div>
+                  <div class="toggle max-value"></div>
+                </div>
+                <div class="price-controls">
+                  <input type="number" name="min-price" value="0"> <p class="dash">-</p>
+                  <input type="number" name="max-price" value="30000">
+                </div>
+              </fieldset>
             </div>
-            <p class="filter-subtitle">Производители:</p>
-            <ul class="manufacturer-filter">
-              <li><label for="bosch"><input type="checkbox" id="bosch">Bosch</label></li>
-              <li><label for="intersckol"><input type="checkbox" id="intersckol">Интерскол</label></li>
-              <li><label for="makita"><input type="checkbox" id="makita">Makita</label></li>
-              <li><label for="dewalt"><input type="checkbox" id="dewalt">Dewalt</label></li>
-              <li><label for="hitachi"><input type="checkbox" id="hitachi">Hitachi</label></li>
-            </ul>
-            <p class="filter-subtitle">Питание:</p>
-            <ul>
-              <li><label for="accumulator"><input type="radio" id="accumulator" name="charge">Аккумуляторные</label>
-              </li>
-              <li><label for="network"><input type="radio" id="network" name="charge">Сетевые</label></li>
-            </ul>
+            <div>
+              <fieldset>
+                <legend class="filter-subtitle">Производители:</legend>
+                <ul class="manufacturer-filter">
+                  <li><input type="checkbox" class="visually-hidden" id="bosch"><label for="bosch">Bosch</label></li>
+                  <li><input type="checkbox" class="visually-hidden" id="intersckol"><label for="intersckol">Интерскол</label></li>
+                  <li><input type="checkbox" class="visually-hidden" id="makita"><label for="makita">Makita</label></li>
+                  <li><input type="checkbox" class="visually-hidden" id="dewalt"><label for="dewalt">Dewalt</label></li>
+                  <li><input type="checkbox" class="visually-hidden" id="hitachi"><label for="hitachi">Hitachi</label></li>
+                </ul>
+              </fieldset>
+            </div>
+            <div>
+              <fieldset>
+                <legend class="filter-subtitle">Питание:</legend>
+                <ul class="accumulator-filter">
+                  <li><input type="radio" class="visually-hidden" id="accumulator" name="charge"><label for="accumulator">Аккумуляторные</label></li>
+                  <li><input type="radio" class="visually-hidden" id="network" name="charge"><label for="network">Сетевые</label></li>
+                </ul>
+              </fieldset>
+            </div>
+            
             <input type="submit" value="Показать">
           </form>
         </article>
