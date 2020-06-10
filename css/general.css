@@ -1174,6 +1174,32 @@ body {
     text-align: center;
 }
 
+.list-pages {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.list-pages button {
+    color: var(--black);
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid var(--filter-border-color);
+    border-radius: 2px;
+    text-transform: uppercase;
+    background-color: var(--white);
+}
+
+.list-pages .next {
+    padding: 10px 30px;
+}
+
+.list-pages .chosen {
+    background-color: var(--red);
+    color: var(--white);
+}
+
 .perforator .buy {
     display: flex;
     flex-direction: column;
