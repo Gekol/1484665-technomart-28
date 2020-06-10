@@ -200,12 +200,17 @@ body {
     margin: 0 auto;
 }
 
-.login:hover .login-img {
+.login-img-hover, .user-hover, .logout-img-hover,
+.login:hover .login-img, .login:active .logout-img-hover {
     display: none;
 }
 
-.login:hover .login-img-hover {
+.login:hover .login-img-hover, .login:active .login-img {
     display: inline;
+}
+
+.login:active .login-img-hover {
+    display: none;
 }
 
 .login img {
@@ -287,6 +292,14 @@ body {
 
 .profile:hover .user-hover, .profile:hover .logout-img-hover {
     display: inline;
+}
+
+.profile:active .user, .profile:active .logout-img {
+    display: inline;
+}
+
+.profile:active .user-hover, .profile:active .logout-img-hover {
+    display: none;
 }
 
 .profile p {
@@ -1537,8 +1550,4 @@ body {
 .descending.selected {
     cursor: default;
     border-color: var(--red) transparent transparent transparent;
-}
-
-.login-img-hover, .user-hover, .logout-img-hover {
-    display: none;
 }
