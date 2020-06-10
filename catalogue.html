@@ -27,7 +27,7 @@
             <img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
             <span>Корзина: 10</span>
           </div>
-          <button>Оформить заказ: 0</button>
+          <button class="order">Оформить заказ: 0</button>
         </div>
       </div>
     </div>
@@ -41,8 +41,9 @@
         </div>
         <div class="profile-block">
           <div class="profile">
-            <p class="name"><img src="img/icon-user.svg" width="20" height="18" alt="User" /> Равшан Джамшутович <img
-                src="img/icon-login.svg" width="20" height="17" alt="Log in" /></p>
+            <p class="name"><img src="img/icon-user.svg" class="user" width="20" height="18" alt="User" /><img src="img/icon-user-hover.svg" class="user-hover" width="20" height="18" alt="User" /> Равшан Джамшутович <img
+                src="img/icon-logout.svg" class="logout-img" width="20" height="17" alt="Log out" /><img
+                src="img/icon-logout-hover.svg" class="logout-img-hover" width="20" height="17" alt="Log out" /></p>
           </div>
           <ul>
             <li>Мои заказы</li>
@@ -126,85 +127,128 @@
           <div class="sort-block">
             <p>Сортировка</p>
             <ul>
-              <li>По цене</li>
-              <li>По типу</li>
-              <li>По функционалу</li>
-              <li><img src="img/icon-down-dir.svg" alt="Icon down red" class="ascending" />
-                <img src="img/icon-down-dir1.svg" alt="Icon down grey" class="descending" /></li>
+              <li class="sort-filter selected">По цене</li>
+              <li class="sort-filter">По типу</li>
+              <li class="sort-filter">По функционалу</li>
+              <li class="order-arrows">
+                <div class="arrow ascending selected"></div>
+                <div class="arrow descending"></div>
+              </li>
             </ul>
           </div>
           <ul class="perforators-list">
-            <li>
+            <li class="good">
               <div class="perforator">
                 <img src="img/snippet-945.jpg" width="144" height="128" alt="Perforator 2000" />
               </div>
+              <div class="buy">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
+              </div>
               <b>Перфоратор BOSCH BFG 6000</b>
               <p class="formerPrice">30500 Р.</p>
               <p class="currentPrice">25500 Р.</p>
             </li>
-            <li>
+            <li class="good">
               <div class="perforator">
                 <img src="img/snippet-945.jpg" width="144" height="128" alt="Perforator 6000" />
               </div>
-              <b>Перфоратор BOSCH BFG 6000</b>
-              <p class="formerPrice">30500 Р.</p>
-              <p class="currentPrice">25500 Р.</p>
-            </li>
-            <li>
-              <div class="perforator new">
-                <div class="buy">
-                  <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
-                    Купить</button>
-                  <button>В закладки</button>
-                </div>
+              <div class="buy">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
               </div>
               <b>Перфоратор BOSCH BFG 6000</b>
               <p class="formerPrice">30500 Р.</p>
               <p class="currentPrice">25500 Р.</p>
             </li>
-            <li>
+            <li class="good">
+              <div class="perforator new">
+                <img src="img/snippet-945.jpg" width="144" height="128" alt="Perforator 6000" />
+              </div>
+              <div class="buy new">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
+              </div>
+              <b>Перфоратор BOSCH BFG 6000</b>
+              <p class="formerPrice">30500 Р.</p>
+              <p class="currentPrice">25500 Р.</p>
+            </li>
+            <li class="good">
               <div class="perforator new">
                 <img src="img/snippet-18927.jpg" width="127" height="112" alt="Perforator 3000" />
+              </div>
+              <div class="buy new">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
               </div>
               <b>Перфоратор BOSCH BFG 3000</b>
               <p class="formerPrice">22500 Р.</p>
               <p class="currentPrice">15500 Р.</p>
             </li>
-            <li>
+            <li class="good">
               <div class="perforator">
                 <img src="img/snippet-945.jpg" width="144" height="128" alt="Perforator 6000" />
+              </div>
+              <div class="buy">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
               </div>
               <b>Перфоратор BOSCH BFG 6000</b>
               <p class="formerPrice">30500 Р.</p>
               <p class="currentPrice">25500 Р.</p>
             </li>
-            <li>
+            <li class="good">
               <div class="perforator new">
                 <img src="img/snippet-18927.jpg" width="127" height="112" alt="Perforator 3000" />
+              </div>
+              <div class="buy new">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
               </div>
               <b>Перфоратор BOSCH BFG 3000</b>
               <p class="formerPrice">22500 Р.</p>
               <p class="currentPrice">15500 Р.</p>
             </li>
-            <li>
+            <li class="good">
               <div class="perforator new">
                 <img src="img/snippet-18927.jpg" width="127" height="112" alt="Perforator 3000" />
+              </div>
+              <div class="buy new">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
               </div>
               <b>Перфоратор BOSCH BFG 3000</b>
               <p class="formerPrice">22500 Р.</p>
               <p class="currentPrice">15500 Р.</p>
             </li>
-            <li>
+            <li class="good">
               <div class="perforator">
                 <img src="img/snippet-945.jpg" width="144" height="128" alt="Perforator 6000" />
+              </div>
+              <div class="buy">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
               </div>
               <b>Перфоратор BOSCH BFG 6000</b>
               <p class="formerPrice">30500 Р.</p>
               <p class="currentPrice">25500 Р.</p>
             </li>
-            <li>
+            <li class="good">
               <div class="perforator new">
                 <img src="img/snippet-18927.jpg" width="127" height="112" alt="Perforator 2000" />
+              </div>
+              <div class="buy new">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
               </div>
               <b>Перфоратор BOSCH BFG 2000</b>
               <p class="currentPrice">12500 Р.</p>
@@ -278,7 +322,7 @@
         </div>
         <div class="feedback">
           <p>Обратная связь:<span class="yellow-link"> mail@htmlacademy.ru</span></p>
-          <p>Разработано —  <span class="yellow-link">htmlacademy.ru</span></p>
+          <p>Разработано —  <a href="https://htmlacademy.ru" class="yellow-link">htmlacademy.ru</a></p>
         </div>
       </div>
     </div>

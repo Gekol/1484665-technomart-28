@@ -27,7 +27,7 @@
             <img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
             <span>Корзина: 0</span>
           </div>
-          <button>Оформить заказ: 0</button>
+          <button class="order"><span>Оформить заказ: 0</span></button>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
           <p class="city">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div>
-          <button class="login"><img src="img/icon-login.svg" width="20" height="17" alt="Log in /">Войти</button>
+          <button class="login"><img src="img/icon-login.svg" class="login-img" width="20" height="17" alt="Log in /"><img src="img/icon-login-hover.svg" class="login-img-hover" width="20" height="17" alt="Log in /">Войти</button>
           <button>Регистрация</button>
         </div>
       </div>
@@ -63,7 +63,7 @@
 
   <main class="main-content">
     <section class="details container">
-      <div class="detail materials">
+      <div class="detail materials new">
         <div class="detail-content">
           <h3>Материалы</h3>
           <div class="link">
@@ -115,11 +115,15 @@
       <div class="slider">
         <p>Перфораторы</p>
         <p>Настоящие мужские игрушки</p>
-        <div>
+        <div class="main-image">
           <img src="img/icon-left.svg" width="22" height="40" alt="Left arrow" class="leftArrow" />
           <img src="img/layer-99.png" alt="Perforators" class="perforators" width="620" height="260" />
           <img src="img/icon-left1.svg" width="22" height="40" alt="Right arrow" class="rightArrow" />
-          <a href="catalogue.html">Открыть каталог</a>
+          <a href="catalogue.html" class="open-catalog">Открыть каталог</a>
+        </div>
+        <div class="slider-pages">
+          <div class="slider-page"></div>
+          <div class="slider-page opened"></div>
         </div>
       </div>
     </section>
@@ -130,34 +134,54 @@
         <a href="catalogue.html" class="all-items">Все популярные товары</a>
       </div>
       <ul>
-        <li>
+        <li class="good">
           <div class="perforator">
             <img src="img/snippet-32961.jpg" width="184" height="164" alt="Perforator 9000" />
           </div>
+          <div class="buy">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
+              </div>
           <b>Перфоратор BOSCH BFG 9000</b>
           <p class="formerPrice">32500 Р.</p>
           <p class="currentPrice">22500 Р.</p>
         </li>
-        <li>
-          <div class="perforator">
+        <li class="good">
+          <div class="perforator new">
             <img src="img/snippet-18927.jpg" width="127" height="112" alt="Perforator 3000" />
           </div>
+          <div class="buy new">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
+              </div>
           <b>Перфоратор BOSCH BFG 3000</b>
           <p class="formerPrice">22500 Р.</p>
           <p class="currentPrice">15500 Р.</p>
         </li>
-        <li>
+        <li class="good">
           <div class="perforator">
             <img src="img/snippet-945.jpg" width="144" height="128" alt="Perforator 6000" />
           </div>
+          <div class="buy">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
+              </div>
           <b>Перфоратор BOSCH BFG 6000</b>
           <p class="formerPrice">30500 Р.</p>
           <p class="currentPrice">25500 Р.</p>
         </li>
-        <li>
-          <div class="perforator">
+        <li class="good">
+          <div class="perforator new">
             <img src="img/snippet-18927.jpg" width="127" height="112" alt="Perforator 2000" />
           </div>
+          <div class="buy new">
+                <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
+                  Купить</button>
+                <button>В закладки</button>
+              </div>
           <b>Перфоратор BOSCH BFG 2000</b>
           <p class="currentPrice">12500 Р.</p>
         </li>
@@ -167,7 +191,7 @@
     <section class="manufacturers container">
       <div class="section-title-block">
         <h2 class="section-title">Популярные производители</h2>
-        <h4 class="all-items">Все производители</h4>
+        <a href="catalogue.html" class="all-items">Все производители</a>
       </div>
       <ul class="manufacturers-list">
         <li>
@@ -292,7 +316,7 @@
         </div>
         <div class="feedback">
           <p>Обратная связь:<span class="yellow-link"> mail@htmlacademy.ru</span></p>
-          <p>Разработано —  <span class="yellow-link">htmlacademy.ru</span></p>
+          <p>Разработано —  <a href="https://htmlacademy.ru" class="yellow-link">htmlacademy.ru</a></p>
         </div>
       </div>
     </div>
