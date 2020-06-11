@@ -115,8 +115,6 @@ body {
 
 .address-info, .phone-number {
     margin: 0;
-    font-size: 18px;
-    line-height: 24px;
 }
 
 .address-info {
@@ -154,8 +152,17 @@ body {
     flex-grow: 1;
 }
 
+.contact-info p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
 .contact-info p, .profile-block p {
     margin: 0;
+}
+
+.buttons, .profile-block {
+    width: 299px;
 }
 
 .about .phone {
@@ -198,6 +205,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    width: 270px;
 }
 
 .login-img-hover, .user-hover, .logout-img-hover,
@@ -231,6 +239,8 @@ body {
 
 .downside-contacts-content {
     background-color: var(--basic);
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .downside-contacts {
@@ -480,6 +490,8 @@ body {
 
 .downside-navigation-content {
     background-color: var(--light-basic);
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .downside-navigation {
@@ -695,6 +707,8 @@ body {
 
 .services ul {
     padding: 0;
+    font-size: 13px;
+    line-height: 24px;
 }
 
 .services li {
@@ -705,6 +719,7 @@ body {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .services h3 {
@@ -732,7 +747,7 @@ body {
     position: absolute;
     height: 279px;
     width: 10px;
-    background-image: url("/img/line.png");
+    background-image: url("../img/line.png");
     top: -45px;
     right: 0;
 }
@@ -772,10 +787,13 @@ body {
 
 .service-detail h3 {
     color: var(--light-basic);
+    font-weight: normal;
 }
 
 .service-detail p {
-    width: 330px;
+    width: 313px;
+    font-size: 13px;
+    line-height: 24px;
 }
 
 .service-detail div {
@@ -802,6 +820,8 @@ body {
     padding: 0;
     margin-bottom: 20px;
     list-style-type: none;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .company-details li::before {
@@ -811,11 +831,13 @@ body {
     height: 2px;
     background-color: var(--red);
     margin-right: 12px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .description-block p {
     margin: 0;
+    font-size: 13px;
+    line-height: 24px;
 }
 
 .description-block .intro {
@@ -825,6 +847,7 @@ body {
 .description-block h2 {
     font-size: 30px;
     line-height: 30px;
+    font-weight: normal;
 }
 
 .company-details, .map-block {
@@ -948,6 +971,7 @@ body {
     line-height: 30px;
     color: var(--light-basic);
     margin: 29px 28px 30px;
+    font-weight: normal;
 }
 
 .section-title + a {
@@ -1020,6 +1044,7 @@ body {
 
 .goods h3 {
     font-family: 'Cuprum', "Arial", sans-serif;
+    font-weight: normal;
 }
 
 .perforators p {
@@ -1043,13 +1068,14 @@ body {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .name {
     font-size: 21px;
     line-height: 21px;
     background: var(--white);
-    padding: 12px 5px;
+    padding: 12px 0;
 }
 
 .name img {
@@ -1073,7 +1099,7 @@ body {
     padding: 11px 21px 11px 35px;
 }
 
-.bookmark:hover img, .cart:hover img {
+.bookmark:hover img, .cart:hover img, .search:hover img, .bought:hover img {
     opacity: 1;
 }
 
@@ -1218,7 +1244,7 @@ body {
     position: absolute;
     width: 23px;
     height: 23px;
-    background-image: url("/img/checkbox-off.png");
+    background-image: url("../img/checkbox-off.png");
     left: -37px;
     top: -1px;
     box-sizing: border-box;
@@ -1228,15 +1254,15 @@ body {
 .accumulator-filter label::before {
     width: 27px;
     height: 27px;
-    background-image: url("/img/radio-off.png");
+    background-image: url("../img/radio-off.png");
 }
 
 .manufacturer-filter label:hover::before {
-    background-image: url("/img/checkbox-off-hover.png");
+    background-image: url("../img/checkbox-off-hover.png");
 }
 
 .accumulator-filter label:hover::before {
-    background-image: url("/img/radio-off-hover.png");
+    background-image: url("../img/radio-off-hover.png");
 }
 
 .manufacturer-filter input:checked + label::before, .accumulator-filter input:checked + label::before {
@@ -1245,22 +1271,22 @@ body {
     width: 27px;
     height: 23px;
     left: -37px;
-    background-image: url("/img/checkbox-on.png");
+    background-image: url("../img/checkbox-on.png");
     background-repeat: no-repeat;
 }
 
 .accumulator-filter input:checked + label::before {
     width: 27px;
     height: 27px;
-    background-image: url("/img/radio-on.png");
+    background-image: url("../img/radio-on.png");
 }
 
 .manufacturer-filter input:checked + label:hover::before, .accumulator-filter input:checked + label:hover::before {
-    background-image: url("/img/checkbox-on-hover.png");
+    background-image: url("../img/checkbox-on-hover.png");
 }
 
 .accumulator-filter input:checked + label:hover::before {
-    background-image: url("/img/radio-on-hover.png");
+    background-image: url("../img/radio-on-hover.png");
 }
 
 .filters > div {
