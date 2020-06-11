@@ -1273,7 +1273,7 @@ body {
     height: 23px;
     background-image: url("../img/checkbox-off.png");
     left: -37px;
-    top: -1px;
+    top: -5px;
     box-sizing: border-box;
     background-repeat: no-repeat;
 }
@@ -1289,8 +1289,12 @@ body {
 }
 
 .accumulator-filter label:hover::before {
-    top: 0;
+    top: -4px;
     background-image: url("../img/radio-off-hover.png");
+}
+
+.accumulator-button {
+    margin-top: -10px;
 }
 
 .manufacturer-filter input:checked + label::before, .accumulator-filter input:checked + label::before {
