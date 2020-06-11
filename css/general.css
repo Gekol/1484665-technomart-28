@@ -161,6 +161,10 @@ body {
     margin: 0;
 }
 
+.buttons {
+    display: flex;
+}
+
 .buttons, .profile-block {
     width: 299px;
 }
@@ -219,6 +223,14 @@ body {
 
 .login:active .login-img-hover {
     display: none;
+}
+
+
+.about .login {
+    display: flex;
+    align-items: center;
+    padding: 0 19px;
+    padding-right: 27px;
 }
 
 .login img {
