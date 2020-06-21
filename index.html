@@ -34,9 +34,12 @@
     
     <div class="container">
       <div class="about">
-        <p class="description">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
+        <p class="description">Интернет-магазин <br>
+          строительных материалов <br>
+          и инструментов для ремонта
+        </p>
         <div class="contact-info">
-          <p class="phone"><img src="img/icon-phone.svg" width="19" height="19" alt="Phone" /> +7 (812) 555-05-55</p>
+          <p class="phone"><img src="img/icon-phone.svg" width="19" height="19" alt="Phone" /> <a href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a> </p>
           <p class="city">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="buttons">
@@ -117,7 +120,10 @@
         <p>Настоящие мужские игрушки</p>
         <div class="main-image">
           <img src="img/icon-left.svg" width="22" height="40" alt="Left arrow" class="leftArrow" />
-          <img src="img/layer-99.png" alt="Perforators" class="perforators" width="620" height="260" />
+          <div class="slides">
+            <img src="img/drels.png" alt="Perforators" class="perforators visually-hidden" width="620" height="260" />
+            <img src="img/layer-99.png" alt="Perforators" class="perforators" width="620" height="260" />
+          </div>
           <img src="img/icon-left1.svg" width="22" height="40" alt="Right arrow" class="rightArrow" />
           <a href="catalogue.html" class="open-catalog">Открыть каталог</a>
         </div>
@@ -141,7 +147,7 @@
           <div class="buy">
                 <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
                   Купить</button>
-                <button>В закладки</button>
+                <button class="add-bookmark">В закладки</button>
               </div>
           <b>Перфоратор BOSCH BFG 9000</b>
           <p class="formerPrice">32500 Р.</p>
@@ -154,7 +160,7 @@
           <div class="buy new">
                 <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
                   Купить</button>
-                <button>В закладки</button>
+                <button class="add-bookmark">В закладки</button>
               </div>
           <b>Перфоратор BOSCH BFG 3000</b>
           <p class="formerPrice">22500 Р.</p>
@@ -167,7 +173,7 @@
           <div class="buy">
                 <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
                   Купить</button>
-                <button>В закладки</button>
+                <button class="add-bookmark">В закладки</button>
               </div>
           <b>Перфоратор BOSCH BFG 6000</b>
           <p class="formerPrice">30500 Р.</p>
@@ -180,7 +186,7 @@
           <div class="buy new">
                 <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
                   Купить</button>
-                <button>В закладки</button>
+                <button class="add-bookmark">В закладки</button>
               </div>
           <b>Перфоратор BOSCH BFG 2000</b>
           <p class="currentPrice">12500 Р.</p>
@@ -195,28 +201,28 @@
       </div>
       <ul class="manufacturers-list">
         <li>
-          <img src="img/logo.png" alt="logo 1" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo.png" alt="logo 1" width="220" height="145" /></a>
         </li>
         <li>
-          <img src="img/logo1.png" alt="logo 2" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo1.png" alt="logo 2" width="220" height="145" /></a>
         </li>
         <li>
-          <img src="img/logo2.png" alt="logo 3" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo2.png" alt="logo 3" width="220" height="145" /></a>
         </li>
         <li>
-          <img src="img/logo3.png" alt="logo 4" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo3.png" alt="logo 4" width="220" height="145" /></a>
         </li>
         <li>
-          <img src="img/logo4.png" alt="logo 5" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo4.png" alt="logo 5" width="220" height="145" /></a>
         </li>
         <li>
-          <img src="img/logo5.png" alt="logo 6" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo5.png" alt="logo 6" width="220" height="145" /></a>
         </li>
         <li>
-          <img src="img/logo6.png" alt="logo 7" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo6.png" alt="logo 7" width="220" height="145" /></a>
         </li>
         <li>
-          <img src="img/logo7.png" alt="logo 8" width="220" height="145" />
+          <a href="catalogue.html"><img src="img/logo7.png" alt="logo 8" width="220" height="145" /></a>
         </li>
       </ul>
     </section>
@@ -230,9 +236,9 @@
         </ul>
         <div class="service-details">
           <ul>
-            <li><button disabled>Доставка</button></li>
-            <li><button>Гарантия</button></li>
-            <li><button>Кредит</button></li>
+            <li><button disabled class="service-button">Доставка</button></li>
+            <li><button class="service-button">Гарантия</button></li>
+            <li><button class="service-button">Кредит</button></li>
           </ul>
           <article class="service-detail">
             <div>
@@ -241,8 +247,29 @@
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем, <br>
                 поднимая его на ваш этаж!</p>
+                
             </div>
             <img src="img/layer-131-1.jpg" alt="truck" width="468" height="261" />
+          </article>
+          <article class="service-detail visually-hidden">
+            <div>
+              <h3>Гарантия</h3>
+              <p>Если купленный у нас товар поломается или заискрит, <br>
+                а также в случае пожара, спровоцированного его <br>
+                возгоранием,  вы всегда можете быть уверены в нашей <br>
+                гарантии. Мы обменяем сгоревший товар на новый. <br>
+                Дом уж восстановите как-нибудь сами.</p>
+            </div>
+            <img src="img/layer-130.jpg" class="guarantee" alt="guarantee" width="389" height="283" />
+          </article>
+          <article class="service-detail credit-block visually-hidden">
+            <div>
+              <h3>Кредит</h3>
+              <p>Залезть в долговую яму стало проще! <br>
+                Кредитные консультанты придут вам на помощь.</p>
+              <button class="send-request">Отправить заявку</button>
+            </div>
+            <img src="img/layer-119.jpg" alt="Credit" width="465" height="285" />
           </article>
         </div>
       </div>
@@ -266,7 +293,7 @@
         <h2 class="contacts-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <img src="img/layer-5.png" alt="Map" width="300" height="158" />
-        <button>Заблудились? Напишите нам!</button>
+        <button class="leave-feedback-show">Заблудились? Напишите нам!</button>
       </article>
     </section>
   </main>
@@ -277,7 +304,7 @@
         <div class="address">
           <p class="title">Техномарт</p>
           <p class="address-info">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="phone-number">+7 (812) 555-05-55</p>
+          <p class="phone-number"><a href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a></p>
         </div>
         <div class="links">
           <ul class="white-links">
@@ -316,19 +343,37 @@
         </div>
         <div class="feedback">
           <p>Обратная связь:<span class="yellow-link">mail@htmlacademy.ru</span></p>
-          <p>Разработано — <a href="https://htmlacademy.ru" class="yellow-link">htmlacademy.ru</a></p>
+          <p>Разработано — <a href="https://up.htmlacademy.ru/htmlcss/28v" class="yellow-link">htmlacademy.ru</a></p>
         </div>
       </div>
     </div>
-
   </footer>
-  <form action="index.html" class="visually-hidden">
-    <label for="name">Ваше имя:<input type="text" id="name"></label><br>
-    <label for="email">Ваш e-mail:<input type="text" id="email"></label><br>
-    <label for="text">Текст письма: <textarea name="text" id="text" cols="30" rows="10"
-        placeholder=""></textarea></label><br>
-    <input type="submit" value="submit">
-  </form>
+  <section class="leave-feedback visually-hidden">
+    <form action="index.html" class="write-us">
+      <div class="form-content">
+        <div class="customer-contacts">
+          <div>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" placeholder="Имя Фамилия">
+          </div>
+          <div>
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" placeholder="email@example.com">
+          </div>
+        </div>
+        <div class="feedback-text">
+          <label for="text">Текст письма: </label>
+          <textarea name="text" id="text"
+              placeholder="В свободной форме"></textarea>
+        </div>   
+      </div>
+      <div class="submit-feedback-block">
+        <input type="submit" class="feedback-leave" value="Отправить">
+      </div> 
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </form>
+  </section>
+  <script src="js/popups.js"></script>
 </body>
 
 </html>
