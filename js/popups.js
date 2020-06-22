@@ -140,16 +140,14 @@ document.querySelectorAll(".service-button").forEach((element, index) => {
 
 document.querySelector(".search input").addEventListener("focus", function(event) {
     document.querySelector(".search-block").style.backgroundColor = "#FFFFFF";
-    document.querySelectorAll(".search img").forEach(element => {
-        event.target.classList.toggle("visually-hidden");
-    });
+    event.target.parentNode.children[0].classList.toggle("visually-hidden");
+    event.target.parentNode.children[1].classList.toggle("visually-hidden");
 });
 
 document.querySelector(".search input").addEventListener("blur", element => {
     document.querySelector(".search-block").style.backgroundColor = "#293449";
-    document.querySelectorAll(".search img").forEach(element => {
-        element.classList.toggle("visually-hidden");
-    });
+    event.target.parentNode.children[0].classList.toggle("visually-hidden");
+    event.target.parentNode.children[1].classList.toggle("visually-hidden");
 });
 
 document.querySelector(".mini-map").addEventListener("click", function(event) {
