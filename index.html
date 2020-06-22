@@ -13,10 +13,13 @@
       <div class="menu-block container">
         <div class="title-block">
           <p class="title">Техномарт</p>
-          <form class="search" method="GET" action="index.html">
-            <img src="img/icon-search.svg" width="17" height="17" alt="Search" />
-            <input type="text" placeholder="Поиск">
-          </form>
+          <div class="search-block">
+            <form class="search" method="GET" action="index.html">
+              <img src="img/icon-search.svg" width="17" height="17" alt="Search" />
+              <img src="img/icon-search-red.svg" class="visually-hidden" width="17" height="17" alt="Search" />
+              <input type="text" placeholder="Поиск">
+            </form>
+          </div>
         </div>
         <div class="menu">
           <div class="bookmark">
@@ -27,7 +30,7 @@
             <img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
             <span>Корзина: 0</span>
           </div>
-          <button class="order"><span>Оформить заказ: 0</span></button>
+          <button class="order"><span>Оформить заказ</span></button>
         </div>
       </div>
     </div>
@@ -260,7 +263,7 @@
                 гарантии. Мы обменяем сгоревший товар на новый. <br>
                 Дом уж восстановите как-нибудь сами.</p>
             </div>
-            <img src="img/layer-130.jpg" class="guarantee" alt="guarantee" width="389" height="283" />
+            <img src="img/layer-130.jpg" class="guarantee" alt="guarantee" width="389" height="261" />
           </article>
           <article class="service-detail credit-block visually-hidden">
             <div>
@@ -269,7 +272,7 @@
                 Кредитные консультанты придут вам на помощь.</p>
               <button class="send-request">Отправить заявку</button>
             </div>
-            <img src="img/layer-119.jpg" alt="Credit" width="465" height="285" />
+            <img src="img/layer-119.jpg" alt="Credit" width="465" height="261" />
           </article>
         </div>
       </div>
@@ -292,7 +295,13 @@
       <article class="map-block">
         <h2 class="contacts-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <img src="img/layer-5.png" alt="Map" width="300" height="158" />
+        <img src="img/layer-5.png" class="mini-map" alt="Map" width="300" height="158" />
+        <div class="interactive-map-block visually-hidden">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616188!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1592814405998!5m2!1sru!2sua" width="100%" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <button class="modal-close" type="button" aria-label="Закрыть"></button>
+          </div>
+        </div>
         <button class="leave-feedback-show">Заблудились? Напишите нам!</button>
       </article>
     </section>

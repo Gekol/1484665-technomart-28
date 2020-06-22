@@ -49,7 +49,10 @@ if (goods > 0) {
 
 buyButtons.forEach(element => {
     element.addEventListener("click", function(event) {
-        document.querySelector(".item-added-block").classList.toggle("visually-hidden");
+        let boughtBlock = document.querySelector(".item-added-block");
+        if (boughtBlock) {
+            boughtBlock.classList.toggle("visually-hidden");
+        }
         goods += 1;
         if (isStorageSupport) {
             localStorage.setItem("goods", goods);
@@ -101,6 +104,28 @@ if (rightArrow) {
     });    
 }
 
+let sliderButtons = document.querySelectorAll(".slider-page");
+if (sliderButtons) {
+    sliderButtons.forEach((element, index) => {
+        element.addEventListener("click", function(event) {
+            let slides = document.querySelectorAll(".perforators");
+            slides.forEach((currentSlide, currentIndex) => {
+                if (currentIndex == index) {
+                    currentSlide.classList.remove("visually-hidden");
+                } else {
+                    currentSlide.classList.add("visually-hidden");
+                }
+            });
+            
+            sliderButtons.forEach(currentButton => {
+                console.log(currentButton);
+                currentButton.classList.remove("opened");
+            });
+            element.classList.add("opened");
+        })
+    });
+}
+
 document.querySelectorAll(".service-button").forEach((element, index) => {
     element.addEventListener("click", function(event) {
         document.querySelectorAll(".service-button").forEach(currentButton => {
@@ -113,6 +138,20 @@ document.querySelectorAll(".service-button").forEach((element, index) => {
     })
 });
 
-document.querySelector(".search input").addEventListener("focus", element => {
+document.querySelector(".search input").addEventListener("focus", function(event) {
+    document.querySelector(".search-block").style.backgroundColor = "#FFFFFF";
+    document.querySelectorAll(".search img").forEach(element => {
+        event.target.classList.toggle("visually-hidden");
+    });
+});
 
-}) 
+document.querySelector(".search input").addEventListener("blur", element => {
+    document.querySelector(".search-block").style.backgroundColor = "#293449";
+    document.querySelectorAll(".search img").forEach(element => {
+        element.classList.toggle("visually-hidden");
+    });
+});
+
+document.querySelector(".mini-map").addEventListener("click", function(event) {
+    document.querySelector(".interactive-map-block").classList.toggle("visually-hidden");
+});
