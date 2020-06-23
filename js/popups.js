@@ -153,11 +153,14 @@ document.querySelector(".search input").addEventListener("blur", element => {
 let miniMap = document.querySelector(".mini-map");
 
 function showMap(event) {
-    document.querySelector(".interactive-map-block").classList.toggle("visually-hidden");
+    if (event.keyCode == 13 || event.button == 0) {
+        document.querySelector(".interactive-map-block").classList.toggle("visually-hidden");
+    }
 }
 
 if (miniMap) {
     miniMap.addEventListener("click", showMap);
+    miniMap.addEventListener("keypress", showMap)
 }
 
 document.querySelectorAll(".good").forEach(element => {
