@@ -150,6 +150,37 @@ document.querySelector(".search input").addEventListener("blur", element => {
     event.target.parentNode.children[1].classList.toggle("visually-hidden");
 });
 
-document.querySelector(".mini-map").addEventListener("click", function(event) {
+let miniMap = document.querySelector(".mini-map");
+
+function showMap(event) {
     document.querySelector(".interactive-map-block").classList.toggle("visually-hidden");
+}
+
+if (miniMap) {
+    miniMap.addEventListener("click", showMap);
+}
+
+document.querySelectorAll(".good").forEach(element => {
+    element.addEventListener("blur", function(event) {
+        event.target.children[0].style.display = "none";
+        event.target.children[1].style.display = "flex";
+    })
+
+    element.addEventListener("focus", function(event) {
+        document.querySelectorAll(".good").forEach(currentGood => {
+            currentGood.children[0].style.display = "flex";
+            currentGood.children[1].style.display = "none";
+        })
+        event.target.children[0].style.display = "none";
+        event.target.children[1].style.display = "flex";
+    })
 });
+
+document.querySelectorAll(":not(.good):not(.add-bookmark):not(.buy-button)").forEach(element => {
+    element.addEventListener("focus", function(event) {
+        document.querySelectorAll(".good").forEach(currentGood => {
+            currentGood.children[0].style.display = "flex";
+            currentGood.children[1].style.display = "none";
+        })
+    })
+})
