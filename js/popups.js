@@ -22,15 +22,18 @@ try {
     isStorageSupport = false;
 }
 
-document.querySelector(".modal-close").addEventListener("click", function(event) {
-    event.target.parentNode.parentNode.classList.toggle("visually-hidden");
-});
+document.querySelectorAll(".modal-close").forEach(element => {
+    element.addEventListener("click", function(event) {
+        event.target.parentNode.parentNode.classList.toggle("visually-hidden");
+    });
+})
 
 let leaveFeedbackButton = document.querySelector(".leave-feedback-show");
 
 if (leaveFeedbackButton) {
     leaveFeedbackButton.addEventListener("click", function(event) {
         document.querySelector(".leave-feedback.visually-hidden").classList.toggle("visually-hidden");
+        // document.querySelector(".leave-feedback").classList.add("modal-show");
     });
 }
 
@@ -187,3 +190,16 @@ document.querySelectorAll(":not(.good):not(.add-bookmark):not(.buy-button)").for
         })
     })
 })
+
+let feedbackForm = document.querySelector(".write-us");
+if (feedbackForm) {
+    feedbackForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let name = document.querySelector(".user_name").value;
+        let strings = name.split(" ");
+        let alphabet = /(а|б|в|г|д|е|ж|з|и|ё|й|ц|у|к|г|н|ш|щ|з|х|ъ|ф|ы|п|р|о|л|э|я|ч|с|м|и|т|ь|б|ю)+/
+        if (!(strings.length == 2 && strings[0].length > 0 && strings[1].toLowerCase().length > 0 && strings[0].match(alphabet) && strings[1].toLowerCase().match(alphabet))) {
+            alert("Incorrect name");
+        }
+    })
+}

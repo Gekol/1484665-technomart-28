@@ -357,23 +357,23 @@
       </div>
     </div>
   </footer>
-  <section class="leave-feedback visually-hidden">
+  <section class="leave-feedback modal-show visually-hidden">
     <form action="index.html" class="write-us">
       <div class="form-content">
         <div class="customer-contacts">
           <div>
             <label for="name">Ваше имя:</label>
-            <input type="text" id="name" placeholder="Имя Фамилия">
+            <input type="text" id="name" required class="user_name" placeholder="Имя Фамилия">
           </div>
           <div>
             <label for="email">Ваш e-mail:</label>
-            <input type="email" id="email" placeholder="email@example.com">
+            <input type="email" id="email" required placeholder="email@example.com">
           </div>
         </div>
         <div class="feedback-text">
           <label for="text">Текст письма: </label>
           <textarea name="text" id="text"
-              placeholder="В свободной форме"></textarea>
+              placeholder="В свободной форме" required></textarea>
         </div>   
       </div>
       <div class="submit-feedback-block">
