@@ -116,8 +116,9 @@ body {
     line-height: 24px;
 }
 
-.profile-block li:hover {
+.profile-block li:hover, .profile-block li:focus {
     color: var(--red);
+    outline: none;
 }
 
 .profile-block p:active, .profile-block li:active {
@@ -215,6 +216,7 @@ body {
     background-color: var(--white);
     border: none;
     cursor: pointer;
+    font-family: 'Cuprum', 'Arial', sans-serif;
 }
 
 .about button:hover, .about button:focus {
@@ -332,11 +334,11 @@ body {
     cursor: pointer;
 }
 
-.user-links:hover a:first-child {
+.user-links:hover:not(:active) img:first-child {
     display: none;
 }
 
-.user-links:hover a:nth-child(2) {
+.user-links:hover:not(:active) img:nth-child(2) {
     display: inline;
 }
 
@@ -347,6 +349,10 @@ body {
 .name a {
     text-decoration: none;
     color: var(--black);
+}
+
+.profile-link:active {
+    color: var(--light-gray);
 }
 
 .profile + ul {
@@ -733,7 +739,7 @@ body {
     background-color: var(--dark-red);
 }
 
-.perforator-examples ul, .services article, .description-block p {
+.perforator-examples ul, .description-block p {
     font-family: 'PT Sans', "Arial", sans-serif;
 }
 
@@ -801,6 +807,7 @@ body {
     text-align: left;
     height: 61px;
     padding-left: 22px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     box-shadow: 0px 1px 0px var(--basic), inset 0px 1px 0px #405069;
 }
 
@@ -828,6 +835,7 @@ body {
 .service-detail h3 {
     color: var(--light-basic);
     font-weight: normal;
+    font-family: 'Cuprum', 'Arial', sans-serif;
 }
 
 .service-detail p {
@@ -1353,6 +1361,7 @@ body {
 
 .manufacturer-filter label:focus, .accumulator-filter label:focus {
     outline: none;
+    text-decoration: underline;
 }
 
 .manufacturer-filter label:hover::before, .manufacturer-filter label:focus::before {

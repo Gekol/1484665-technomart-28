@@ -23,7 +23,7 @@ try {
 }
 
 document.querySelectorAll(".modal-close").forEach(element => {
-    element.addEventListener("click", function(event) {
+    element.addEventListener("click", function (event) {
         event.target.parentNode.parentNode.classList.toggle("visually-hidden");
     });
 })
@@ -31,7 +31,7 @@ document.querySelectorAll(".modal-close").forEach(element => {
 let leaveFeedbackButton = document.querySelector(".leave-feedback-show");
 
 if (leaveFeedbackButton) {
-    leaveFeedbackButton.addEventListener("click", function(event) {
+    leaveFeedbackButton.addEventListener("click", function (event) {
         document.querySelector(".leave-feedback.visually-hidden").classList.toggle("visually-hidden");
     });
 }
@@ -50,7 +50,7 @@ if (goods > 0) {
 }
 
 buyButtons.forEach(element => {
-    element.addEventListener("click", function(event) {
+    element.addEventListener("click", function (event) {
         let boughtBlock = document.querySelector(".item-added-block");
         if (boughtBlock) {
             boughtBlock.classList.toggle("visually-hidden");
@@ -65,7 +65,7 @@ buyButtons.forEach(element => {
 });
 
 bookmarkButtons.forEach(element => {
-    element.addEventListener("click", function(event) {
+    element.addEventListener("click", function (event) {
         bookmarks += 1;
         if (isStorageSupport) {
             localStorage.setItem("bookmarks", bookmarks);
@@ -77,59 +77,81 @@ bookmarkButtons.forEach(element => {
 
 let leftArrow = document.querySelector(".leftArrow");
 
+function leftArrowClick(event) {
+    let currentElem = document.querySelector(".opened");
+    let slide = document.querySelector(".slides .perforators:not(.visually-hidden)");
+    if (currentElem != currentElem.parentNode.firstElementChild) {
+        let prev = document.querySelector(".opened").previousElementSibling;
+        currentElem.classList.toggle("opened");
+        prev.classList.toggle("opened");
+        slide.previousElementSibling.classList.toggle("visually-hidden");
+        slide.classList.toggle("visually-hidden");
+    }
+}
+
 if (leftArrow) {
-    leftArrow.addEventListener("click", function(event) {
-        let currentElem = document.querySelector(".opened");
-        let slide = document.querySelector(".slides .perforators:not(.visually-hidden)");
-        if (currentElem != currentElem.parentNode.firstElementChild) {
-            let prev = document.querySelector(".opened").previousElementSibling;
-            currentElem.classList.toggle("opened");
-            prev.classList.toggle("opened");
-            slide.previousElementSibling.classList.toggle("visually-hidden");
-            slide.classList.toggle("visually-hidden");
+    leftArrow.addEventListener("keypress", function (event) {
+        if (event.keyCode == 13) {
+            leftArrowClick(event)
         }
-    });
+    })
+    leftArrow.addEventListener("click", leftArrowClick);
+}
+
+function rightArrowClick(event) {
+    let currentElem = document.querySelector(".opened");
+    let slide = document.querySelector(".slides .perforators:not(.visually-hidden)");
+    if (currentElem != currentElem.parentNode.lastElementChild) {
+        let next = document.querySelector(".opened").nextElementSibling;
+        currentElem.classList.toggle("opened");
+        next.classList.toggle("opened");
+        slide.nextElementSibling.classList.toggle("visually-hidden");
+        slide.classList.toggle("visually-hidden");
+    }
 }
 
 let rightArrow = document.querySelector(".rightArrow");
 if (rightArrow) {
-    rightArrow.addEventListener("click", function(event) {
-        let currentElem = document.querySelector(".opened");
-        let slide = document.querySelector(".slides .perforators:not(.visually-hidden)");
-        if (currentElem != currentElem.parentNode.lastElementChild) {
-            let next = document.querySelector(".opened").nextElementSibling;
-            currentElem.classList.toggle("opened");
-            next.classList.toggle("opened");
-            slide.nextElementSibling.classList.toggle("visually-hidden");
-            slide.classList.toggle("visually-hidden");
+    rightArrow.addEventListener("keypress", function (event) {
+        if (event.keyCode == 13) {
+            rightArrowClick(event);
         }
-    });    
+    });
+    rightArrow.addEventListener("click", rightArrowClick);
+}
+
+function changeSlide(event, index) {
+    let slides = document.querySelectorAll(".perforators");
+    slides.forEach((currentSlide, currentIndex) => {
+        if (currentIndex == index) {
+            currentSlide.classList.remove("visually-hidden");
+        } else {
+            currentSlide.classList.add("visually-hidden");
+        }
+    });
+
+    sliderButtons.forEach(currentButton => {
+        currentButton.classList.remove("opened");
+    });
+    event.target.classList.add("opened");
 }
 
 let sliderButtons = document.querySelectorAll(".slider-page");
 if (sliderButtons) {
     sliderButtons.forEach((element, index) => {
-        element.addEventListener("click", function(event) {
-            let slides = document.querySelectorAll(".perforators");
-            slides.forEach((currentSlide, currentIndex) => {
-                if (currentIndex == index) {
-                    currentSlide.classList.remove("visually-hidden");
-                } else {
-                    currentSlide.classList.add("visually-hidden");
-                }
-            });
-            
-            sliderButtons.forEach(currentButton => {
-                console.log(currentButton);
-                currentButton.classList.remove("opened");
-            });
-            element.classList.add("opened");
+        element.addEventListener("keypress", function (event) {
+            if (event.keyCode == 13) {
+                changeSlide(event, index);
+            }
         })
+        element.addEventListener("click", function(event) {
+            changeSlide(event, index);
+        });
     });
 }
 
 document.querySelectorAll(".service-button").forEach((element, index) => {
-    element.addEventListener("click", function(event) {
+    element.addEventListener("click", function (event) {
         document.querySelectorAll(".service-button").forEach(currentButton => {
             currentButton.disabled = false;
         })
@@ -140,7 +162,7 @@ document.querySelectorAll(".service-button").forEach((element, index) => {
     })
 });
 
-document.querySelector(".search input").addEventListener("focus", function(event) {
+document.querySelector(".search input").addEventListener("focus", function (event) {
     document.querySelector(".search-block").style.backgroundColor = "#FFFFFF";
     event.target.parentNode.children[0].classList.toggle("visually-hidden");
     event.target.parentNode.children[1].classList.toggle("visually-hidden");
@@ -167,7 +189,7 @@ if (miniMap) {
 
 let feedbackForm = document.querySelector(".write-us");
 if (feedbackForm) {
-    feedbackForm.addEventListener("submit", function(event) {
+    feedbackForm.addEventListener("submit", function (event) {
         event.preventDefault();
         let name = document.querySelector(".user_name").value;
         let strings = name.split(" ");
@@ -179,7 +201,7 @@ if (feedbackForm) {
 }
 
 document.querySelectorAll(".manufacturer-filter label").forEach(element => {
-    element.addEventListener("keypress", function(event) {
+    element.addEventListener("keypress", function (event) {
         if (event.keyCode == 13) {
             event.target.previousElementSibling.checked = !event.target.previousElementSibling.checked;
         }
@@ -187,7 +209,7 @@ document.querySelectorAll(".manufacturer-filter label").forEach(element => {
 })
 
 document.querySelectorAll(".accumulator-filter label").forEach(element => {
-    element.addEventListener("keypress", function(event) {
+    element.addEventListener("keypress", function (event) {
         if (event.keyCode == 13) {
             event.target.previousElementSibling.checked = true;
         }
