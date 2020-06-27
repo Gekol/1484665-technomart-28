@@ -147,6 +147,7 @@ body {
     color: var(--white);
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .order:hover, .order:focus {
@@ -213,6 +214,7 @@ body {
     padding: 0 24px;
     background-color: var(--white);
     border: none;
+    cursor: pointer;
 }
 
 .about button:hover, .about button:focus {
@@ -233,7 +235,8 @@ body {
 }
 
 .login-img-hover, .user-hover, .logout-img-hover,
-.login:hover .login-img, .login:focus .login-img, .login:active .logout-img-hover {
+.login:hover .login-img, .login:focus .login-img, 
+.login:active .logout-img-hover {
     display: none;
 }
 
@@ -329,20 +332,12 @@ body {
     cursor: pointer;
 }
 
-.profile:hover .user, .profile:hover .logout-img {
+.user-links:hover a:first-child {
     display: none;
 }
 
-.profile:hover .user-hover, .profile:hover .logout-img-hover {
+.user-links:hover a:nth-child(2) {
     display: inline;
-}
-
-.profile:active .user, .profile:active .logout-img {
-    display: inline;
-}
-
-.profile:active .user-hover, .profile:active .logout-img-hover {
-    display: none;
 }
 
 .profile p {
@@ -809,6 +804,10 @@ body {
     box-shadow: 0px 1px 0px var(--basic), inset 0px 1px 0px #405069;
 }
 
+.service-button:not([disabled]) {
+    cursor: pointer;
+}
+
 .service-button:disabled {
     color: var(--basic);
     background-color: var(--white);
@@ -923,7 +922,8 @@ body {
     text-decoration: none;
     padding: 11px 0 9px;
     text-transform: uppercase;
-    border: none; 
+    border: none;
+    cursor: pointer;
 }
 
 .send-request {
@@ -937,6 +937,7 @@ body {
     width: 200px;
     margin-top: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .company-details a {
@@ -1061,11 +1062,11 @@ body {
     flex-direction: column;
 }
 
-.good:hover .perforator {
+.good:hover .perforator, .good:focus-within .perforator {
     display: none;
 }
 
-.good:hover .buy {
+.good:hover .buy, .good:focus-within .buy {
     display: flex;
 }
 
@@ -1088,7 +1089,7 @@ body {
     margin: 0;
 }
 
-.perforators-list li:hover, .perforators-list li:focus {
+.good:hover, .good:focus {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     outline: none;
 }
@@ -1139,6 +1140,7 @@ body {
     line-height: 21px;
     background: var(--white);
     padding: 12px 0;
+    display: flex;
 }
 
 .name img {
@@ -1323,6 +1325,7 @@ body {
 .manufacturer-filter label, .accumulator-filter label {
     position: relative;
     left: 40px;
+    cursor: pointer;
 }
 
 .manufacturer-filter label::before, .accumulator-filter label::before {
@@ -1348,11 +1351,15 @@ body {
     background-image: url("../img/radio-off.png");
 }
 
-.manufacturer-filter label:hover::before {
+.manufacturer-filter label:focus, .accumulator-filter label:focus {
+    outline: none;
+}
+
+.manufacturer-filter label:hover::before, .manufacturer-filter label:focus::before {
     background-image: url("../img/checkbox-off-hover.png");
 }
 
-.accumulator-filter label:hover::before {
+.accumulator-filter label:hover::before, .accumulator-filter label:focus::before {
     top: -4px;
     background-image: url("../img/radio-off-hover.png");
 }
@@ -1377,11 +1384,11 @@ body {
     background-image: url("../img/radio-on.png");
 }
 
-.manufacturer-filter input:checked + label:hover::before, .accumulator-filter input:checked + label:hover::before {
+.manufacturer-filter input:checked + label:hover::before, .manufacturer-filter input:checked + label:focus::before {
     background-image: url("../img/checkbox-on-hover.png");
 }
 
-.accumulator-filter input:checked + label:hover::before {
+.accumulator-filter input:checked + label:hover::before, .accumulator-filter input:checked + label:focus::before {
     background-image: url("../img/radio-on-hover.png");
 }
 
@@ -1412,6 +1419,7 @@ body {
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .range-controls {
@@ -1443,6 +1451,7 @@ body {
     position: absolute;
     top: 31px;
     left: 20px;
+    cursor: pointer;
 }
 
 .max-value {

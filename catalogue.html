@@ -47,12 +47,17 @@
         </div>
         <div class="profile-block">
           <div class="profile">
-            <p class="name">
-              <a href="profile.html" class="user"><img src="img/icon-user.svg" width="20" height="18" alt="User" /></a>
-              <a href="profile.html" class="user-hover"><img src="img/icon-user-hover.svg" width="20" height="18" alt="User" /></a>
+            <div class="name">
+              <div class="user-links">
+                <a href="profile.html" class="user"><img src="img/icon-user.svg" width="20" height="18" alt="User" /></a>
+                <a href="profile.html" class="user-hover"><img src="img/icon-user-hover.svg" width="20" height="18" alt="User" /></a>
+              </div>
               <a href="profile.html" class="profile-link">Равшан Джамшутович</a>
-              <a href="logout.html" class="logout-img"><img src="img/icon-logout.svg" width="20" height="17" alt="Log out" /></a>
-              <a href="logout.html" class="logout-img-hover"><img src="img/icon-logout-hover.svg" width="20" height="17" alt="Log out" /></p></a>
+              <div class="user-links">
+                <a href="logout.html" class="logout-img"><img src="img/icon-logout.svg" width="20" height="17" alt="Log out" /></a>
+                <a href="logout.html" class="logout-img-hover"><img src="img/icon-logout-hover.svg" width="20" height="17" alt="Log out" /></a>
+              </div>
+            </div>
           </div>
           <ul>
             <li>Мои заказы</li>
@@ -111,11 +116,11 @@
               <fieldset>
                 <legend class="filter-subtitle">Производители:</legend>
                 <ul class="manufacturer-filter">
-                  <li><input type="checkbox" class="visually-hidden" name="bosch" id="bosch"><label for="bosch">Bosch</label></li>
-                  <li><input type="checkbox" class="visually-hidden" name="intersckol" id="intersckol"><label for="intersckol">Интерскол</label></li>
-                  <li><input type="checkbox" class="visually-hidden" name="makita" id="makita"><label for="makita">Makita</label></li>
-                  <li><input type="checkbox" class="visually-hidden" name="dewalt" id="dewalt"><label for="dewalt">Dewalt</label></li>
-                  <li><input type="checkbox" class="visually-hidden" name="hitachi" id="hitachi"><label for="hitachi">Hitachi</label></li>
+                  <li><input type="checkbox" class="visually-hidden" name="bosch" id="bosch" checked><label for="bosch" tabindex="0">Bosch</label></li>
+                  <li><input type="checkbox" class="visually-hidden" name="intersckol" id="intersckol"><label for="intersckol" tabindex="0">Интерскол</label></li>
+                  <li><input type="checkbox" class="visually-hidden" name="makita" id="makita" checked><label for="makita" tabindex="0">Makita</label></li>
+                  <li><input type="checkbox" class="visually-hidden" name="dewalt" id="dewalt"><label for="dewalt" tabindex="0">Dewalt</label></li>
+                  <li><input type="checkbox" class="visually-hidden" name="hitachi" id="hitachi"><label for="hitachi" tabindex="0">Hitachi</label></li>
                 </ul>
               </fieldset>
             </div>
@@ -123,8 +128,8 @@
               <fieldset>
                 <legend class="filter-subtitle">Питание:</legend>
                 <ul class="accumulator-filter">
-                  <li><input type="radio" class="visually-hidden" id="accumulator" name="charge"><label for="accumulator" class="accumulator-button">Аккумуляторные</label></li>
-                  <li><input type="radio" class="visually-hidden" id="network" name="charge"><label for="network">Сетевые</label></li>
+                  <li><input type="radio" class="visually-hidden" id="accumulator" name="charge" checked><label for="accumulator" class="accumulator-button" tabindex="0">Аккумуляторные</label></li>
+                  <li><input type="radio" class="visually-hidden" id="network" name="charge"><label for="network" tabindex="0">Сетевые</label></li>
                 </ul>
               </fieldset>
             </div>

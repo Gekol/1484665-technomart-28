@@ -33,7 +33,6 @@ let leaveFeedbackButton = document.querySelector(".leave-feedback-show");
 if (leaveFeedbackButton) {
     leaveFeedbackButton.addEventListener("click", function(event) {
         document.querySelector(".leave-feedback.visually-hidden").classList.toggle("visually-hidden");
-        // document.querySelector(".leave-feedback").classList.add("modal-show");
     });
 }
 
@@ -166,31 +165,6 @@ if (miniMap) {
     miniMap.addEventListener("keypress", showMap)
 }
 
-document.querySelectorAll(".good").forEach(element => {
-    element.addEventListener("blur", function(event) {
-        event.target.children[0].style.display = "none";
-        event.target.children[1].style.display = "flex";
-    })
-
-    element.addEventListener("focus", function(event) {
-        document.querySelectorAll(".good").forEach(currentGood => {
-            currentGood.children[0].style.display = "flex";
-            currentGood.children[1].style.display = "none";
-        })
-        event.target.children[0].style.display = "none";
-        event.target.children[1].style.display = "flex";
-    })
-});
-
-document.querySelectorAll(":not(.good):not(.add-bookmark):not(.buy-button)").forEach(element => {
-    element.addEventListener("focus", function(event) {
-        document.querySelectorAll(".good").forEach(currentGood => {
-            currentGood.children[0].style.display = "flex";
-            currentGood.children[1].style.display = "none";
-        })
-    })
-})
-
 let feedbackForm = document.querySelector(".write-us");
 if (feedbackForm) {
     feedbackForm.addEventListener("submit", function(event) {
@@ -203,3 +177,19 @@ if (feedbackForm) {
         }
     })
 }
+
+document.querySelectorAll(".manufacturer-filter label").forEach(element => {
+    element.addEventListener("keypress", function(event) {
+        if (event.keyCode == 13) {
+            event.target.previousElementSibling.checked = !event.target.previousElementSibling.checked;
+        }
+    })
+})
+
+document.querySelectorAll(".accumulator-filter label").forEach(element => {
+    element.addEventListener("keypress", function(event) {
+        if (event.keyCode == 13) {
+            event.target.previousElementSibling.checked = true;
+        }
+    })
+})
