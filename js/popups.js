@@ -25,6 +25,7 @@ try {
 document.querySelectorAll(".modal-close").forEach(element => {
     element.addEventListener("click", function (event) {
         event.target.parentNode.parentNode.classList.toggle("visually-hidden");
+        event.target.parentNode.parentNode.classList.remove("modal-error");
     });
 })
 
@@ -195,7 +196,12 @@ if (feedbackForm) {
         let strings = name.split(" ");
         let alphabet = /(а|б|в|г|д|е|ж|з|и|ё|й|ц|у|к|г|н|ш|щ|з|х|ъ|ф|ы|п|р|о|л|э|я|ч|с|м|и|т|ь|б|ю)+/
         if (!(strings.length == 2 && strings[0].length > 0 && strings[1].toLowerCase().length > 0 && strings[0].match(alphabet) && strings[1].toLowerCase().match(alphabet))) {
+            feedbackForm.parentElement.classList.remove("modal-error");
+            feedbackForm.parentElement.offsetWidth = feedbackForm.parentElement.offsetWidth;
+            feedbackForm.parentElement.classList.add("modal-error");
             alert("Incorrect name");
+        } else {
+            feedbackForm.classList.remove("modal-error");
         }
     })
 }
