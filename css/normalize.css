@@ -281,6 +281,17 @@
   [type="number"]::-webkit-outer-spin-button {
     height: auto;
   }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+    -moz-padding-end: 14px;
+  }
+
+  input[type=number]:focus, 
+  input[type=number]:hover { 
+      -moz-appearance:number-input;
+      -moz-padding-end: 0;
+  } 
   
   /**
    * 1. Correct the odd appearance in Chrome and Safari.

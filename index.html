@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/minimized.css">
+  <link rel="stylesheet" href="css/general.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <form class="search" method="GET" action="index.html">
               <img src="img/icon-search.svg" width="17" height="17" alt="Search" />
               <img src="img/icon-search-red.svg" class="visually-hidden" width="17" height="17" alt="Search" />
-              <input type="text" placeholder="Поиск">
+              <input type="text" placeholder="Поиск:" value="Поиск:">
             </form>
           </div>
         </div>
@@ -38,12 +38,13 @@
     
     <div class="container">
       <div class="about">
-        <p class="description">Интернет-магазин <br>
-          строительных материалов <br>
-          и инструментов для ремонта
-        </p>
+        <div class="description">
+          <p>Интернет-магазин</p>
+          <p>строительных материалов </p>
+          <p>и инструментов для ремонта</p>
+        </div>
         <div class="contact-info">
-          <p class="phone"><img src="img/icon-phone.svg" width="19" height="19" alt="Phone" /> <a href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a> </p>
+          <p class="phone"><img src="img/icon-phone.svg" width="19" height="19" alt="Phone" /> <a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a> </p>
           <p class="city">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="buttons">
@@ -122,11 +123,11 @@
       <div class="slider">
         <p>Перфораторы</p>
         <p>Настоящие мужские игрушки</p>
-        <div class="main-image">
+        <div class="main-image">  
           <img src="img/icon-left.svg" width="22" height="40" alt="Left arrow" class="leftArrow" tabindex="0" />
           <div class="slides">
-            <img src="img/drels.png" alt="Perforators" class="perforators visually-hidden" width="620" height="260" />
-            <img src="img/layer-99.png" alt="Perforators" class="perforators" width="620" height="260" />
+            <img src="img/drels.png" alt="Perforators" class="perforators visually-hidden" width="620" height="266" />
+            <img src="img/layer-99.png" alt="Perforators" class="perforators" width="620" height="266" />
           </div>
           <img src="img/icon-left1.svg" width="22" height="40" alt="Right arrow" class="rightArrow" tabindex="0" />
           <a href="catalogue.html" class="open-catalog">Открыть каталог</a>
@@ -140,13 +141,13 @@
 
     <section class="perforator-examples container">
       <div class="section-title-block">
-        <h2 class="section-title">Популярные товары</h2>
+        <h2 class="section-title">Популярные товары:</h2>
         <a href="catalogue.html" class="all-items">Все популярные товары</a>
       </div>
       <ul>
         <li class="good" tabindex="0">
           <div class="perforator">
-            <img src="img/snippet-32961.jpg" width="184" height="164" alt="Perforator 9000" />
+            <img src="img/snippet-32961.jpg" class="perf900" width="184" height="164" alt="Perforator 9000" />
           </div>
           <div class="buy">
                 <button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="Cart" />
@@ -155,7 +156,7 @@
               </div>
           <b>Перфоратор BOSCH BFG 9000</b>
           <p class="formerPrice">32500 Р.</p>
-          <p class="currentPrice">22500 Р.</p>
+          <p class="currentPrice">25500 Р.</p>
         </li>
         <li class="good" tabindex="0">
           <div class="perforator new">
@@ -193,6 +194,7 @@
                 <button class="add-bookmark">В закладки</button>
               </div>
           <b>Перфоратор BOSCH BFG 2000</b>
+          <p class="formerPrice hidden">30500 Р.</p>
           <p class="currentPrice">12500 Р.</p>
         </li>
       </ul>
@@ -239,42 +241,50 @@
           <li>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</li>
         </ul>
         <div class="service-details">
-          <ul>
+          <ul class="service-slides">
             <li><button disabled class="service-button">Доставка</button></li>
             <li><button class="service-button">Гарантия</button></li>
             <li><button class="service-button">Кредит</button></li>
           </ul>
-          <article class="service-detail">
-            <div>
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо <br>
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем, <br>
-                поднимая его на ваш этаж!</p>
-                
-            </div>
-            <img src="img/layer-131-1.jpg" alt="truck" width="468" height="261" />
-          </article>
-          <article class="service-detail visually-hidden">
-            <div>
-              <h3>Гарантия</h3>
-              <p>Если купленный у нас товар поломается или заискрит, <br>
-                а также в случае пожара, спровоцированного его <br>
-                возгоранием,  вы всегда можете быть уверены в нашей <br>
-                гарантии. Мы обменяем сгоревший товар на новый. <br>
-                Дом уж восстановите как-нибудь сами.</p>
-            </div>
-            <img src="img/layer-130.jpg" class="guarantee" alt="guarantee" width="389" height="261" />
-          </article>
-          <article class="service-detail credit-block visually-hidden">
-            <div>
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! <br>
-                Кредитные консультанты придут вам на помощь.</p>
-              <button class="send-request">Отправить заявку</button>
-            </div>
-            <img src="img/layer-119.jpg" alt="Credit" width="465" height="261" />
-          </article>
+          <ul class="service-slides-content">
+            <li>
+              <article class="service-detail">
+                <div>
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо </p>
+                  <p>к вашему подъезду совершенно бесплатно!</p>
+                  <p>Ведь мы неплохо заработаем, </p>
+                  <p>поднимая его на ваш этаж!</p>
+                    
+                </div>
+                <img src="img/layer-131-1.jpg" alt="truck" width="468" height="261" />
+              </article>
+            </li>
+            <li class="visually-hidden">
+              <article class="service-detail">
+                <div>
+                  <h3>Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит, <br>
+                    а также в случае пожара, спровоцированного его <br>
+                    возгоранием,  вы всегда можете быть уверены в нашей <br>
+                    гарантии. Мы обменяем сгоревший товар на новый. <br>
+                    Дом уж восстановите как-нибудь сами.</p>
+                </div>
+                <img src="img/layer-130.jpg" class="guarantee" alt="guarantee" width="389" height="261" />
+              </article>
+            </li>
+            <li class="visually-hidden">
+              <article class="service-detail credit-block">
+                <div>
+                  <h3>Кредит</h3>
+                  <p>Залезть в долговую яму стало проще! <br>
+                    Кредитные консультанты придут вам на помощь.</p>
+                  <button class="send-request">Отправить заявку</button>
+                </div>
+                <img src="img/layer-119.jpg" alt="Credit" width="465" height="261" />
+              </article>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -299,7 +309,7 @@
         <img src="img/layer-5.png" class="mini-map" alt="Map" width="300" height="158" tabindex="0" />
         <div class="interactive-map-block visually-hidden">
           <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616188!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1592814405998!5m2!1sru!2sua" width="100%" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616188!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1592814405998!5m2!1sru!2sua" width="936" height="450" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <button class="modal-close" type="button" aria-label="Закрыть"></button>
           </div>
         </div>
@@ -312,9 +322,9 @@
     <div class="downside-navigation-content">
       <div class="downside-navigation container">
         <div class="address">
-          <p class="title">Техномарт</p>
+          <p class="title big">Техномарт</p>
           <p class="address-info">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="phone-number"><a href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a></p>
+          <p class="phone-number"><a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a></p>
         </div>
         <div class="links">
           <ul class="white-links">
@@ -383,7 +393,7 @@
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </form>
   </section>
-  <script src="js/minimized.js"></script>
+  <script src="js/popups.js"></script>
 </body>
 
 </html>

@@ -157,9 +157,11 @@ document.querySelectorAll(".service-button").forEach((element, index) => {
             currentButton.disabled = false;
         })
         element.disabled = true;
-        let currentElem = document.querySelector(".service-detail:not(.visually-hidden)");
-        currentElem.classList.toggle("visually-hidden");
-        document.querySelectorAll(".service-detail")[index].classList.toggle("visually-hidden");
+        let blocks = document.querySelectorAll(".service-detail");
+        blocks.forEach(element => {
+            element.parentElement.classList.add("visually-hidden");
+        });
+        blocks[index].parentNode.classList.remove("visually-hidden");
     })
 });
 
