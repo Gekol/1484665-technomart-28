@@ -1009,6 +1009,7 @@ body {
 .company-details li::before {
     content: "";
     display: inline-block;
+    vertical-align: middle;
     width: 25px;
     height: 2px;
     background-color: var(--red);
@@ -1404,6 +1405,7 @@ body {
 .way li:not(:first-child)::before {
     content: "";
     display: inline-block;
+    vertical-align: middle;
     margin: 0 15px;
     margin-right: 17px;
     padding: 4px;
