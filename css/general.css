@@ -716,6 +716,12 @@ body {
     margin-bottom: 57px;
 }
 
+.slides {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
 .perforators {
     height: 100%;
     grid-column: 1/3;
