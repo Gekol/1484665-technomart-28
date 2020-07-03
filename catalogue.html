@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=PT+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/minimized.css">
 </head>
@@ -18,7 +19,7 @@
             <form class="search" method="GET" action="index.html">
               <img src="img/icon-search.svg" width="17" height="17" alt="Search" />
               <img src="img/icon-search-red.svg" class="visually-hidden" width="17" height="17" alt="Search" />
-              <input type="text" placeholder="Поиск:" value="Поиск:">
+              <label for=""><input type="text" placeholder="Поиск:" value="Поиск:"></label>
             </form>
           </div>
         </div>
@@ -44,7 +45,7 @@
           <p>и инструментов для ремонта</p>
         </div>
         <div class="contact-info">
-          <p class="phone"><img src="img/icon-phone.svg" width="19" height="19" alt="Phone" /> <a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a> </p>
+          <p class="phone"><img src="img/icon-phone.svg" width="19" height="19" alt="Phone" /> <a href="tel:78125550555">+7 (812) 555-05-55</a> </p>
           <p class="city">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="profile-block">
@@ -113,9 +114,9 @@
                   <div class="toggle max-value" tabindex="0"></div>
                 </div>
                 <div class="price-controls">
-                  <input type="number" name="min-price" min="0" max="29999" value="0"> 
+                  <label for=""><input type="number" name="min-price" min="0" max="29999" value="0"> </label>
                   <div class="dash"></div>
-                  <input type="number" name="max-price" min="1" max="35000" value="30000">
+                  <label for=""><input type="number" name="max-price" min="1" max="35000" value="30000"></label>
                 </div>
               </fieldset>
             </div>
@@ -304,7 +305,7 @@
         <div class="address">
           <a href="index.html" class="title big">Техномарт</a>
           <p class="address-info">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="phone-number"><a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a></p>
+          <p class="phone-number"><a href="tel:7(812)5550555">+7 (812) 555-05-55</a></p>
         </div>
         <div class="links">
           <ul class="white-links">
@@ -351,7 +352,7 @@
   <section class="item-added-block visually-hidden">
     <form action="/catalogue.html" class="item-added-form">
       <div class="message-block">
-        <img src="img/icon-mark.png" alt="Purchase successful">
+        <img src="img/icon-mark.png" alt="Purchase successful" width="66" height="66">
         <p class="added">Товар добавлен в корзину!</p>
       </div>
       <div class="order-buttons">
