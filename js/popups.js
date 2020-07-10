@@ -24,6 +24,7 @@ try {
 
 document.querySelectorAll(".modal-close").forEach(element => {
     element.addEventListener("click", function (event) {
+        event.preventDefault();
         event.target.parentNode.parentNode.classList.toggle("visually-hidden");
         event.target.parentNode.parentNode.classList.remove("modal-error");
     });
@@ -33,6 +34,7 @@ let leaveFeedbackButton = document.querySelector(".leave-feedback-show");
 
 if (leaveFeedbackButton) {
     leaveFeedbackButton.addEventListener("click", function (event) {
+        event.preventDefault();
         document.querySelector(".leave-feedback.visually-hidden").classList.toggle("visually-hidden");
     });
 }
@@ -40,8 +42,8 @@ if (leaveFeedbackButton) {
 let buyButtons = document.querySelectorAll(".buy-button");
 let bookmarkButtons = document.querySelectorAll(".add-bookmark");
 
-document.querySelector(".bookmark span").innerHTML = "Закладки: " + bookmarks;
-document.querySelector(".cart span").innerHTML = "Корзина: " + goods;
+document.querySelector(".bookmark a").innerHTML = "Закладки: " + bookmarks;
+document.querySelector(".cart a").innerHTML = "Корзина: " + goods;
 
 if (bookmarks > 0) {
     document.querySelector(".bookmark").classList.add("bought");
@@ -60,7 +62,7 @@ buyButtons.forEach(element => {
         if (isStorageSupport) {
             localStorage.setItem("goods", goods);
         }
-        document.querySelector(".cart span").innerHTML = "Корзина: " + goods;
+        document.querySelector(".cart a").innerHTML = "Корзина: " + goods;
         document.querySelector(".cart").classList.add("bought");
     })
 });
@@ -79,6 +81,7 @@ bookmarkButtons.forEach(element => {
 let leftArrow = document.querySelector(".leftArrow");
 
 function leftArrowClick(event) {
+    event.preventDefault();
     let currentElem = document.querySelector(".opened");
     let slide = document.querySelector(".slides .perforators:not(.visually-hidden)");
     if (currentElem != currentElem.parentNode.firstElementChild) {
@@ -100,6 +103,7 @@ if (leftArrow) {
 }
 
 function rightArrowClick(event) {
+    event.preventDefault();
     let currentElem = document.querySelector(".opened");
     let slide = document.querySelector(".slides .perforators:not(.visually-hidden)");
     if (currentElem != currentElem.parentNode.lastElementChild) {
@@ -123,11 +127,15 @@ if (rightArrow) {
 
 function changeSlide(event, index) {
     let slides = document.querySelectorAll(".perforators");
+    let slideTitles = document.querySelectorAll(".slide-title");
     slides.forEach((currentSlide, currentIndex) => {
+        let currentTitle = slideTitles[currentIndex];
         if (currentIndex == index) {
             currentSlide.classList.remove("visually-hidden");
+            currentTitle.classList.remove("visually-hidden");
         } else {
             currentSlide.classList.add("visually-hidden");
+            currentTitle.classList.add("visually-hidden");
         }
     });
 
@@ -167,20 +175,17 @@ document.querySelectorAll(".service-button").forEach((element, index) => {
 
 document.querySelector(".search input").addEventListener("focus", function (event) {
     document.querySelector(".search-block").style.backgroundColor = "#FFFFFF";
-    event.target.parentNode.children[0].classList.toggle("visually-hidden");
-    event.target.parentNode.children[1].classList.toggle("visually-hidden");
 });
 
 document.querySelector(".search input").addEventListener("blur", element => {
     document.querySelector(".search-block").style.backgroundColor = "#293449";
-    event.target.parentNode.children[0].classList.toggle("visually-hidden");
-    event.target.parentNode.children[1].classList.toggle("visually-hidden");
 });
 
 let miniMap = document.querySelector(".mini-map");
 
 function showMap(event) {
     if (event.keyCode == 13 || event.button == 0) {
+        event.preventDefault();
         document.querySelector(".interactive-map-block").classList.toggle("visually-hidden");
     }
 }
