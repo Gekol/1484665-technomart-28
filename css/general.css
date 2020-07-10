@@ -737,6 +737,7 @@ body {
     margin-top: 22px;
     margin-left: 2px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .links li:not(:last-child) {
@@ -2190,6 +2191,7 @@ body {
 
 .write-us .feedback-leave {
     width: 460px;
+    height: 42px;
     background-color: var(--red);
     color: var(--white);
     font-size: 14px;
