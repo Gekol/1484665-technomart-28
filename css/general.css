@@ -575,7 +575,7 @@ body {
     background-image: url("../img/icon-5.png");
 }
 
-.formerPrice {
+.former-price {
     text-decoration: line-through;
     font-size: 17px;
     line-height: 18px;
@@ -584,7 +584,7 @@ body {
     margin: 9px 0 13px;
 }
 
-.currentPrice {
+.current-price {
     background: var(--red);
     display: flex;
     justify-content: center;
@@ -601,7 +601,7 @@ body {
     margin: 0 0 17px -70px;
 }
 
-.currentPrice::after {
+.current-price::after {
     content: "";
     width: 0;
     height: 0;
@@ -936,6 +936,7 @@ body {
     width: 22px;
     padding: 0;
     margin: 0;
+    height: 40px;
 }
 
 .main-image {

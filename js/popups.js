@@ -181,9 +181,12 @@ document.querySelector(".search input").addEventListener("blur", element => {
     document.querySelector(".search-block").style.backgroundColor = "#293449";
 });
 
-let miniMap = document.querySelector(".mini-map");
+let miniMap = document.querySelector(".mini-map-block");
 
 function showMap(event) {
+    console.log(event.target);
+    console.log(event.keyCode);
+    console.log(event.button);
     if (event.keyCode == 13 || event.button == 0) {
         event.preventDefault();
         document.querySelector(".interactive-map-block").classList.toggle("visually-hidden");
